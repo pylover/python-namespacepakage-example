@@ -10,3 +10,9 @@ venv:
 .PHONY: venv-delete
 venv-delete:
 	rm -rf $(VENVPATH)
+
+
+.PHONY: fresh
+fresh:
+	make venv-delete
+	make venv
