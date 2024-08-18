@@ -16,3 +16,20 @@ venv-delete:
 fresh:
 	make venv-delete
 	make venv
+
+
+.PHONY: installall
+installall:
+	cd foo-bar; make install
+	cd foo-baz; make install
+
+
+.PHONY: uninstallall
+uninstallall:
+	cd foo-bar; make uninstall
+	cd foo-baz; make uninstall
+
+
+.PHONY: test
+test:
+	./test.py
