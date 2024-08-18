@@ -23,5 +23,10 @@ setup(
     author='Vahid Mardani',
     author_email='vahid.mardani@gmail.com',
     install_requires=dependencies,
-    packages=['foo.baz'],
+    # packages=['foo.baz'],
+    packages=find_namespace_packages(
+        where='.',
+        include=['foo'],
+        exclude=['tests'],
+    )
 )
