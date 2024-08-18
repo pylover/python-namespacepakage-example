@@ -1,0 +1,2 @@
+class FooCore:
+    pass
